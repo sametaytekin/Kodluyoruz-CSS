@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halit'ın Çılgın Kahveleri</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Eski CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Bootstrap -->
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,89 +19,114 @@
 
     <!-- Internal CSS -->
     <style>
-        /* Reklam bölümü için */
-        #reklam-background{
-            background-color: #aa4904;
-            border-radius: 10px 10px 10px 10px;
-        }
-        /* Sıralı listeyi sıralamak için */
-        .liste{
-            text-align: center;
-            list-style-position: inside;
-        }
 
-        .liste li{
-            margin:50px;
+        body{
+            background-color: #E9ECEF ;
         }
 
     </style>
     <!-- Internal CSS -->
 </head>
-<body class="bg-color">
-    <header>
-        <h1>Hoşgeldiniz</h1>
-    </header>
-    <!-- Navigasyon kismi -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="coffee.html">Kahveler</a></li>
-            <li><a href="secondPage.html">Mağaza</a></li>
-            <li><a href="about-us.html">Hakkımızda</a></li>
-        </ul>
-    </nav>
-    <!-- Navigasyon kismi -->
+<body>
+    <!-- Navbar kısmı -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#bdb76b ;">
+        <a class="navbar-brand" href="#">Halit'in Çılgın Kahveleri</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!-- Aktif olan link -->
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee.html">Kahve</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="secondPage.html">Mağaza</a>
+            </li>
+            <li class="nav-item"><a href="about-us.html" class="nav-link">Hakkımızda</a></li>
+          </ul>
+ 
+        </div>
+      </nav>
+      <!-- Navbar kısmı -->
+
     <!-- Ana kisim -->
-    <main>
-        <aside id="reklam-background"> 
-            <br>
-            <!-- Reklamlar  -->
-            <p>Buraya reklam gelecek!!!</p>
-            <!-- Reklamlar -->
-            <br>
-            <img src="images/cookies.jpg" width="200" alt="Buraya Reklam gelecek">
-        </aside>
+    <main class="container">
+        <div class="row">
+            <div class="jumbotron col-lg" style="background-color: rgb(207, 207, 207);">
+                <h1 class="display-3">Hoşgeldiniz</h1>
+                
+                <p class="lead">Her türde kahve bulabileceğinize emin olduğumuz Halit'ın Çılgın Kahvelerine hoşgeldiniz. Keşfedilmemiş, tadına bakılmamış kahvelerin peşinde koşarak elimizden gelenin en iyisyle bu çılgın tatları sizlerle buluşturmak istiyoruz.</p>
+                <hr class="my-4">
+                <p>Burada yeni şeyler keşfedeceğinize eminiz.</p>
+                <a class="btn btn-primary btn-lg" href="about-us.html" role="button">Hakkımızda</a>
+            </div>
+        </div>  
+ 
+        <div class="row mt-3">
+          <div class="col-md-2">
+            <aside class="ml-4 mr-1 col-md" id="reklam-background"> 
 
+              <figure class="figure">
+                <img src="images/cookies.jpg" class="figure-img img-fluid rounded" width="150px"  alt="Buraya Reklam gelecek">
+                <figcaption class="figure-caption">Buraya reklam gelecek</figcaption>
+              </figure>
+
+          </aside>
+          </div>
+          <section class="col-md-10">
+            <div class="row mb-3">
+              <article class="col-md mr-3 ml-3 rounded-lg p-3" style="background-color: rgb(199, 199, 199)">
+                <h3>Hazır Kahve</h3>
+                <p>Hazır Kahvelerimiz Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum in inventore molestiae, ex, unde neque labore hic eum corporis eveniet voluptatibus, fugit voluptas magni.</p>
+                <a href="coffee.html#instant-coffee" class="btn btn-info ">Kahveye Git</a>
+              </article>
+
+              <article class="col-md mr-3 ml-3 rounded-lg p-3" style="background-color: rgb(199, 199, 199)">
+                <h3>Aksesuar</h3>
+                <p>Aksesuarlarımız Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum in inventore molestiae, ex, unde neque labore hic eum corporis eveniet voluptatibus, fugit voluptas magni.</p>
+                <a href="coffee.html#aksesuar" class="btn btn-info">Kahveye Git</a>
+
+              </article>
+
+            </div>
+
+            <div class="row mb-3">
+                <article class="col-md mr-3 ml-3 rounded-lg p-3" style="background-color: rgb(199, 199, 199)">
+                  <h3>Türk kahvesi</h3>
+                  <p>Türk kahvelerimiz Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum in inventore molestiae, ex, unde neque labore hic eum corporis eveniet voluptatibus, fugit voluptas magni.</p>
+                  <a href="coffee.html#turkish-coffee" class="btn btn-info ">Kahveye Git</a>
+                </article>
+
+             
+
+                <article class="col-md mr-3 ml-3 rounded-lg p-3" style="background-color: rgb(199, 199, 199)">
+                  <h3>Filtre Kahve</h3>
+                  <p>Filtre Kahvelerimiz Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum in inventore molestiae, ex, unde neque labore hic eum corporis eveniet voluptatibus, fugit voluptas magni.</p>
+                  <a href="coffee.html#filter-coffee" class="btn btn-info">Kahveye Git</a>
+                </article>
+
+            </div>
+          </section>
+            
+
+
+        </div>
+        
         <!-- Yazi kismi -->
-        <section>
-            <article>
-                <p>Her türde kahve bulabileceğinize emin olduğumuz Halit'ın Çılgın Kahvelerine hoşgeldiniz. Keşfedilmemiş, tadına bakılmamış kahvelerin peşinde koşarak elimizden gelenin en iyisyle bu çılgın tatları sizlerle buluşturmak istiyoruz.</p>
-            </article>
-            <article>
-                <p></p>
-            </article>
-            <article>
-                <ol class="liste">
-                    <li><img src="images/turkish-coffee.jpg" height="300" alt="">
-                        <br>
-                        <a href="coffee.html#turkish-coffee">Türk kahvelerimiz</a></li>
-                    
-                    <li><img src="images/filter-coffee.jpg" height="300" alt="">
-                        <br>
-                        <a href="coffee.html#filter-coffee">Filtre kahvelerimiz</a></li>
-                    
-                    <li><img src="images/hazir-kahve.jpg" height="300" alt="">
-                        <br>
-                        <a href="coffee.html#instant-coffee">Hazır kahvelerimiz</a></li>
-                    
-                    <li><img src="images/aksesuar.jpg" height="300" alt="">
-                        <br>
-                        <a href="coffee.html#aksesuar">Kahve aksesuarları</a></li>
-                    
-                </ol>
 
-            </article>
-
-
-
-        </section>
-        <!-- Yazi kismi -->
+        </div>      
     </main>
     <!-- Ana kisim -->
 
+
     <!-- Alt kisim -->
-    <footer>
-        <address><a href="mailto:xyz@xyzmail.com">xyz@xyzemail.com</a>
+    <footer class="text-center text-lg-start" style="background-color: #E9ECEF">
+        <address class="text-center p-3"><a href="mailto:xyz@xyzmail.com">xyz@xyzemail.com</a>
         İletişim: 212 123 45 67
         </address>
     </footer>
