@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halit'ın Çılgın Kahveleri | Kahvelerimiz</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Eski CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Bootstrap -->    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,71 +17,101 @@
     <!-- Google Fonts -->
     <!-- Internal CSS -->
     <style>
-        p{
-            text-align: center;
-        }
+      body {
+      background-color: #E9ECEF;
+    }
 
     </style>
     <!-- Internal CSS -->
 
 </head>
-<body class="bg-color">
-    <header>
-        <h1>Kahveler</h1>
-    </header>
-    <!-- Navigasyon kismi -->
-    <nav>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#bdb76b ;">
+        <a class="navbar-brand" href="#">Halit'in Çılgın Kahveleri</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item active">
+                <!-- Aktif olan link -->
+              <a class="nav-link" href="coffee.html">Kahve</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="secondPage.html">Mağaza</a>
+            </li>
+            <li class="nav-item"><a href="about-us.html" class="nav-link">Hakkımızda</a></li>
+          </ul>
+ 
+        </div>
+      </nav>
 
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="coffee.html">Kahveler</a></li>
-            <li><a href="secondPage.html">Mağaza</a></li>
-            <li><a href="about-us.html">Hakkımızda</a></li>
-        </ul>
 
-    </nav>
-    <!-- Navigasyon kismi -->
 
     <!-- Ana kisim -->
-    <main>
-        <section>
+    <main class="container">
+        <section class="row">
+          <header>
+            <h1>Kahveler</h1>
             <h2>Gurur duyduğumuz kahvelerimiz</h2>
+         </header>
+     
 
-            <img src="images/landscape.jpg" height="450" width="1000" alt="manzara">
-            
-            <article id="turkish-coffee">
-                <h3>Türk kahvesi</h3>
-                <p>Türk kahvelerimiz Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto cum in inventore molestiae, ex, unde neque labore hic eum corporis eveniet voluptatibus, fugit voluptas magni.</p>
-            </article>
-            
-            <img src="" alt="">
-            
-            <article id="filter-coffee">
-                <h3>Filtre Kahve</h3>
-                <p>Filtre kahvelerde Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ipsum asperiores fuga assumenda exercitationem accusamus autem, neque blanditiis veritatis harum quaerat laborum doloribus. Amet, explicabo!</p>
-            </article>
-            
-            <img src="" alt="">
-            
-            <article id="instant-coffee">
-                <h3>Hazır Kahve</h3>
-                <p>Hazır kahveler Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolorem cumque incidunt at. Consequuntur iusto at voluptatibus, ullam possimus quos fugit repellendus quo vitae fuga.</p>
-            </article>
-            
-            <img src="" alt="">
-            
-            <article id="aksesuar">
-                <h3>Aksesuar</h3>
-                <p>Kahve filtresi, french press Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, inventore? Laborum, consectetur quam assumenda beatae dolor omnis, nostrum eaque unde quia corrupti consequatur, rem qui?</p>
-            </article>
+            <img class="col-md-8 w-50" src="images/landscape.jpg" alt="manzara">
+
+ 
         </section>
+        <div class="row">
+            <div class="card mt-3 col-md-4 style="width: 18rem;">
+              <img src="images/turkish-coffee.jpg" class="card-img-top" 
+              height="300px" alt="Türk kahvesi" >
+              <div class="card-body" id="turkish-coffee">
+                <h5 class="card-title" >Türk kahvelerimiz</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div> 
+
+            <div class="card mt-3 col-md-4" style="width: 18rem;">
+              <img src="images/filter-coffee.jpg" class="card-img-top" 
+              height="300px" alt="Filtre Kahve" >
+              <div class="card-body" id="filter-coffee">
+                <h5 class="card-title" >Filtre Kahvelerimiz</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div> 
+
+
+          <div class="card mt-3 col-md-4" style="width: 18rem;">
+            <img src="images/hazir-kahve.jpg" class="card-img-top" 
+            height="300px" alt="Türk kahvesi" >
+            <div class="card-body" id="instant-coffee">
+              <h5 class="card-title" >Hazır kahvelerimiz</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div> 
+
+          <div class="card mt-3 col-md-4" style="width: 18rem;">
+            <img src="images/aksesuar.jpg" class="card-img-top" 
+            height="300px" alt="Türk kahvesi" >
+            <div class="card-body" id="aksesuar">
+              <h5 class="card-title" >Aksesuar</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div> 
+
+        </div>  
+
 
     </main>
     <!-- Ana kisim -->
 
     <!-- Alt kisim -->
-    <footer>
-        <address><a href="mailto:xyz@xyzmail.com">xyz@xyzemail.com</a>
+    <footer class="text-center text-lg-start" style="background-color: #E9ECEF">
+        <address class="text-center p-3"><a href="mailto:xyz@xyzmail.com">xyz@xyzemail.com</a>
             İletişim: 212 123 45 67
         </address>
     </footer>
